@@ -1,0 +1,216 @@
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Poppins", serif;
+    align-items: center;
+    height: 100%;
+}
+body {
+    background: url('./images/bg-intro-desktop.png');
+    background-color: var(--primary-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#titles-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 85%;
+    gap: 1rem;
+}
+#title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+#subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 400px;
+}
+@media screen and (min-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+    #titles-container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 400px;
+        gap: 1rem;
+    }
+    #title {
+        text-align: left;
+        font-size: 32px;
+        font-weight: 800;
+    }
+    #subtitle {
+        text-align: left;
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
+#form-info {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   max-width: 85%;
+}
+#cost-button {
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--accent-blue);
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
+}
+#cost {
+    max-width: 200px;
+}
+#cost-paragraph {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+}
+#cost-paragraph > span {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+#form-container {
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 85%;
+    padding-bottom: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    min-height: 420px;
+}
+#form-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    width: 85%;
+    gap: 10px;
+    box-sizing: border-box;
+}
+#form-container > form input {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 4px;
+    text-align: left;
+    resize: none;
+    outline: none;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+#form-container > form input::placeholder {
+    color: var(--neutral-dark-blue);
+}
+#form-container > form input:focus {
+    border: 2px solid var(--accent-blue);
+}
+#form-container > form > button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: 10px;
+    background-color: var(--primary-green);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
+}
+#form-container > form > button > span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+#terms-and-services {
+    color: var(--neutral-grayish-blue);
+    font-size: 14px;
+    max-width: 90%;
+    text-align: center;
+}
+#terms-and-services > span {
+    color: var(--primary-red);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+}
+.attribution { 
+    color: white;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
