@@ -112,12 +112,3 @@ body {
     font-size: 13px;
     font-weight: var(--small-font-weight);
 }
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-    position: absolute;
-    bottom: 0;
-}
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
-}
