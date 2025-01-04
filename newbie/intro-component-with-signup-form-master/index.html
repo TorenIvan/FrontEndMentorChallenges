@@ -29,17 +29,22 @@
         </div>
       </button>
       <section id="form-container">
-        <form>
-          <input 
-            id="firstName"
-            name="firstName"
-            autoComplete="off" 
-            type="text" 
-            placeholder="First Name" 
-            aria-placeholder="First Name" 
-            required 
-            aria-required="true" 
-          />
+        <form novalidate>
+          <section class="input-container">
+            <input 
+              id="firstName"
+              name="firstName"
+              autoComplete="off" 
+              type="text" 
+              placeholder="First Name" 
+              aria-placeholder="First Name" 
+              required 
+              minlength="3"
+              aria-required="true" 
+            />
+            <span class="error" aria-live="polite" id="firstNameError"></span>
+          </section>
+          <section class="input-container">
           <input 
             id="lastName"
             name="lastName"
@@ -48,8 +53,12 @@
             placeholder="Last Name" 
             aria-placeholder="Last Name" 
             required 
+            minlength="3"
             aria-required="true" 
           />
+          <span class="error" aria-live="polite" id="lastNameError"></span>
+          </section>
+          <section class="input-container">
           <input 
             id="email"
             name="email"
@@ -58,8 +67,12 @@
             placeholder="Email Address" 
             aria-placeholder="Email Address" 
             required 
+            minlength="8"
             aria-required="true"
           />
+          <span class="error" aria-live="polite" id="emailError"></span>
+         </section>
+          <section class="input-container">
           <input 
             id="password"
             name="password"
@@ -68,8 +81,11 @@
             placeholder="Password" 
             aria-placeholder="Password" 
             required 
+            minlength="8"
             aria-required="true"
           />
+          <span class="error" aria-live="polite" id="passwordError"></span>
+         </section>
           <button type="submit" aria-errormessage="Something went wrong, please try again">
             <span>Claim your free trial</span>
           </button>
@@ -78,5 +94,6 @@
       </section>
     </section>
   </main>
+  <script src="main.js"></script> 
   </body>
 </html>
