@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,61 +30,73 @@
       <section id="form-container">
         <form novalidate>
           <section class="input-container">
-            <input 
-              id="firstName"
-              name="firstName"
-              autoComplete="off" 
-              type="text" 
-              placeholder="First Name" 
-              aria-placeholder="First Name" 
-              required 
-              minlength="3"
-              aria-required="true" 
-            />
+            <section class="input-wrapper">
+              <input 
+                id="firstName"
+                name="firstName"
+                autoComplete="off" 
+                type="text" 
+                placeholder="First Name" 
+                aria-placeholder="First Name" 
+                required 
+                minlength="3"
+                aria-required="true" 
+              />
+              <img src="./images/icon-error.svg" class="error-icon-container" id="firstNameErrorIcon"/>
+            </section>
             <span class="error" aria-live="polite" id="firstNameError"></span>
           </section>
           <section class="input-container">
-          <input 
-            id="lastName"
-            name="lastName"
-            autoComplete="off" 
-            type="text" 
-            placeholder="Last Name" 
-            aria-placeholder="Last Name" 
-            required 
-            minlength="3"
-            aria-required="true" 
-          />
-          <span class="error" aria-live="polite" id="lastNameError"></span>
+            <section class="input-wrapper">
+              <input 
+                id="lastName"
+                name="lastName"
+                autoComplete="off" 
+                type="text" 
+                placeholder="Last Name" 
+                aria-placeholder="Last Name" 
+                required 
+                minlength="3"
+                aria-required="true" 
+              />
+              <img src="./images/icon-error.svg" class="error-icon-container" id="lastNameErrorIcon"/>
+            </section>
+            <span class="error" aria-live="polite" id="lastNameError"></span>
           </section>
           <section class="input-container">
-          <input 
-            id="email"
-            name="email"
-            autoComplete="off"
-            type="email" 
-            placeholder="Email Address" 
-            aria-placeholder="Email Address" 
-            required 
-            minlength="8"
-            aria-required="true"
-          />
-          <span class="error" aria-live="polite" id="emailError"></span>
-         </section>
+            <section class="input-wrapper">
+              <input 
+                id="email"
+                name="email"
+                autoComplete="off"
+                type="email" 
+                placeholder="Email Address" 
+                aria-placeholder="Email Address" 
+                required 
+                minlength="8"
+                aria-required="true"
+              />
+              <img src="./images/icon-error.svg" class="error-icon-container" id="emailErrorIcon"/>
+            </section>
+            <span class="error" aria-live="polite" id="emailError"></span>
+          </section>
           <section class="input-container">
-          <input 
-            id="password"
-            name="password"
-            autoComplete="new-password"
-            type="password" 
-            placeholder="Password" 
-            aria-placeholder="Password" 
-            required 
-            minlength="8"
-            aria-required="true"
-          />
-          <span class="error" aria-live="polite" id="passwordError"></span>
-         </section>
+            <section class="input-wrapper">
+              <input 
+                id="password"
+                name="password"
+                autoComplete="new-password"
+                type="password" 
+                placeholder="Password" 
+                aria-placeholder="Password" 
+                required 
+                minlength="8"
+                aria-required="true"
+              />
+              <img src="./images/icon-error.svg" class="error-icon-container" id="passwordErrorIcon"/>
+            </section>
+            <span class="error" aria-live="polite" id="passwordError"></span>
+          </section>
           <button type="submit" aria-errormessage="Something went wrong, please try again">
             <span>Claim your free trial</span>
           </button>

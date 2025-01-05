@@ -1,18 +1,23 @@
 const form = document.querySelector('form');
 const firstName = document.querySelector('#firstName');
 const firstNameError = document.querySelector('#firstNameError');
+const firstNameErrorIcon = document.querySelector('#firstNameErrorIcon')
 const lastName = document.querySelector('#lastName');
 const lastNameError = document.querySelector('#lastNameError');
+const lastNameErrorIcon = document.querySelector('#lastNameErrorIcon')
 const email = document.querySelector('#email');
 const emailError = document.querySelector('#emailError');
+const emailErrorIcon = document.querySelector('#emailErrorIcon')
 const password = document.querySelector('#password');
 const passwordError = document.querySelector('#passwordError');
+const passwordErrorIcon = document.querySelector('#passwordErrorIcon')
 
 firstName.addEventListener("input", () => {
  if (firstName.validity.valid) {
     firstNameError.textContent = ""; 
     firstNameError.className = "error"; 
     firstName.classList.remove("error-input");
+    firstNameErrorIcon.classList.remove("active");
  } else {
     showFirstNameError();
  }
@@ -23,6 +28,7 @@ lastName.addEventListener("input", () => {
     lastNameError.textContent = ""; 
     lastNameError.className = "error"; 
     lastName.classList.remove("error-input");
+    lastNameErrorIcon.classList.remove("active");
  } else {
     showLastNameError() 
  }
@@ -33,6 +39,7 @@ email.addEventListener("input", () => {
     emailError.textContent = ""; 
     emailError.className = "error"; 
     email.classList.remove("error-input");
+    emailErrorIcon.classList.remove("active");
  } else {
     showEmailError();
  }
@@ -43,6 +50,7 @@ password.addEventListener("input", () => {
     passwordError.textContent = ""; 
     passwordError.className = "error"; 
     password.classList.remove("error-input");
+    passwordErrorIcon.classList.remove("active");
  } else {
     showPasswordError();
  }
@@ -77,6 +85,7 @@ function showFirstNameError() {
     }
     firstNameError.className = "error active";
     firstName.classList.add("error-input");
+    firstNameErrorIcon.className = "error-icon-container active"
 }
 
 function showLastNameError() {
@@ -89,6 +98,7 @@ function showLastNameError() {
     }
     lastNameError.className = "error active";
     lastName.classList.add("error-input");
+    lastNameErrorIcon.className = "error-icon-container active"
 }
 
 function showEmailError() {
@@ -101,16 +111,18 @@ function showEmailError() {
      }
      emailError.className = "error active";
      email.classList.add("error-input");
+    emailErrorIcon.className = "error-icon-container active"
 }
 
 function showPasswordError() {
      if (password.validity.valueMissing) {
          passwordError.textContent = "Password cannot be empty";
      } else if (password.validity.typeMismatch) {
-         passwordError.textContent = "Looks like thisa is not a password";
+         passwordError.textContent = "Looks like this is not a password";
      } else if (password.validity.tooShort) {
          passwordError.textContent = `Password should be at least ${password.minLength} characters; you entered ${password.value.length}`;
      }
      passwordError.className = "error active";
      password.classList.add("error-input");
+    passwordErrorIcon.className = "error-icon-container active"
 }
