@@ -1,0 +1,55 @@
+:root {
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  --secondary-pale-blue: hsl(225, 100%, 98%);
+  --secondary-desaturated-blue: hsl(224, 23%, 55%);
+  --secondary-dark-blue: hsl(223, 47%, 23%)
+}
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("./images/pattern-background-mobile.svg") repeat-x;
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-pale-blue);
+}
+
+@media screen and (min-width: 992px ) {
+   body {
+     min-height: 100vh;
+     background: url("./images/pattern-background-desktop.svg") repeat-x;
+     font-family: "Red Hat Display", serif;
+     font-optical-sizing: auto;
+     display: grid;
+     place-items: center;
+     background-color: var(--primary-pale-blue);
+   } 
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
