@@ -1,0 +1,184 @@
+:root {
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-200: 0.925rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 5rem;
+
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+
+  --secondary-pale-blue: hsl(225, 100%, 98%);
+  --secondary-desaturated-blue: hsl(224, 23%, 55%);
+  --secondary-dark-blue: hsl(223, 47%, 23%);
+}
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: url("./images/pattern-background-mobile.svg") repeat-x;
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-pale-blue);
+}
+
+@media screen and (min-width: 992px ) {
+   body {
+     min-height: 100vh;
+     background: url("./images/pattern-background-desktop.svg") repeat-x;
+     font-family: "Red Hat Display", serif;
+     font-optical-sizing: auto;
+     display: grid;
+     place-items: center;
+     background-color: var(--primary-pale-blue);
+   } 
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+    width: min(95%, 400px);
+    display: grid;
+    grid-template-rows: 1fr 1.3fr 0.8fr;
+    gap: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: .5rem 1rem 3rem 
+      hsl(var(--primary-bright-blue), .2);
+    background-color: white;
+}
+
+#header-image img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#info {
+    margin-left:  5%;
+    margin-right:  5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+#info-text {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    place-items: center;
+    gap: 0.5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+#title {
+    color: var(--secondary-dark-blue);
+    font-weight: var(--fw-black);
+    font-size: var(--fs-600);
+    text-shadow: 2px 2px 4px rgba(35, 53, 92, 0.1); 
+}
+
+#explanation-text {
+    color: var(--secondary-desaturated-blue);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+}
+
+#plan { 
+  background-color: var(--secondary-pale-blue);
+  border-radius: 15px;
+  width: min(100%, 350px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#left-plan {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  place-items: center;
+}
+#left-plan-explanation-title  {
+  font-size: var(--fs-400);
+  color: var(--secondary-dark-blue);
+  line-height: 1;
+  font-weight: var(--fw-black);
+}
+#left-plan-explanation-value  {
+  font-size: var(--fs-300);
+  color: var(--secondary-desaturated-blue);
+  line-height: 1;
+  font-weight: var(--fw-regular);
+}
+#right-plan {
+  display: grid;
+  place-items: center;
+}
+#right-plan a {
+  color: var(--primary-bright-blue);
+}
+#right-plan a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+#buttons {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin-left:  5%;
+  margin-right:  5%;
+  width: min(100%, 350px);
+  max-height: 80%;
+  gap: 1rem;
+}
+.button {
+  user-select: none;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: var(--fs-200);
+  font-weight: var(--fw-bold);
+}
+
+#payment-button {
+  background-color: var(--primary-bright-blue);
+  color: white;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
+}
+#payment-button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+#cancel-button {
+  background-color: inherit;
+  color: var(--secondary-desaturated-blue);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+#cancel-button span:hover {
+  color: var(--secondary-dark-blue);
+  opacity: 0.8;
+  cursor: pointer;
+}
