@@ -62,6 +62,14 @@ main {
     border-radius: 10px;
 }
 
+@media screen and (min-width: 992px) {
+    main {
+        width: min(80%, 900px);
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
 #card-image {
     width: 100%;
     height: 100%;
@@ -76,6 +84,23 @@ main {
     background-size: cover;
 }
 
+@media screen and (min-width: 992px) {
+    #card-image {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        background: 
+            linear-gradient(
+                var(--primary-card-image),
+                var(--primary-card-image)
+            ),
+            url("./images/image-header-desktop.jpg") no-repeat;
+    }
+}
+
+
 #card-main {
     width: 75%;
     text-align: center;
@@ -85,13 +110,24 @@ main {
     gap: 1rem;
 }
 
+@media screen and (min-width: 992px) {
+    #card-main {
+        max-width: 80%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        grid-row: 1;
+        grid-column: 1 / span 1;
+        text-align: left;
+        gap: 1.5rem;
+    }
+}
+
 #preview {
     grid-row: 1 / span 1;
     font-family: 'Inter';
     font-size: var(--fs-700);
     color: var(--secondary-heading-stats);
     font-weight: var(--fw-bold);
-    text-align: center;
     align-self: center;
 }
 
@@ -117,8 +153,22 @@ main {
     gap: var(--fs-700);
 }
 
+@media screen and (min-width: 992px) {
+    #business-entities {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        margin-bottom: 0;
+    }
+}
+
 .entity {
     text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .entity {
+        text-align: left;
+    }
 }
 
 .entity-title {
